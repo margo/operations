@@ -1,2 +1,0 @@
-# Semantic Versioning
-add details

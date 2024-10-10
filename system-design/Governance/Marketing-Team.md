@@ -1,3 +1,0 @@
-# Marketing Team
-
-add details

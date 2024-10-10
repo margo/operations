@@ -1,3 +1,0 @@
-# Organization Structure
-
-add details

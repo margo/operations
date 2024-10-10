@@ -1,3 +1,0 @@
-# Seeking Consensus
-
-Place holder

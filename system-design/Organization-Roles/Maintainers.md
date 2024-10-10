@@ -1,3 +1,0 @@
-# Maintainers
-
-add details

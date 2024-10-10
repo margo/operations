@@ -1,3 +1,0 @@
-# Editors
-
-Add comments

@@ -1,3 +1,0 @@
-# Decision Making
-
-Placeholder
