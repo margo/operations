@@ -4,26 +4,26 @@ docs_dir: system-design
 nav:
   - Introduction: index.md
   - Governance:
-     - Membership Levels: Governance/Membership-Levels.md
-     - Organisational Structure: Governance/Organization-Structure.md
-     - Steering Committee: Governance/Technical-Steering-Committee.md
-     - Working Group: Governance/Working-Group.md
+      - Membership Levels: Governance/Membership-Levels.md
+      - Organisational Structure: Governance/Organization-Structure.md
+      - Steering Committee: Governance/Technical-Steering-Committee.md
+      - Working Group: Governance/Working-Group.md
   - Organizational Roles: 
-     - Editors: Organizational-Roles/Editors.md
-     - Maintainers: Organizational-Roles/Maintainers.md
-     - Members: Organizational-Roles/Participants.md
+      - Editors: Organizational-Roles/Editors.md
+      - Maintainers: Organizational-Roles/Maintainers.md
+      - Members: Organizational-Roles/Participants.md
   - Contributing:
-     - Placeholder: Contributing/placeholder.md
+      - Placeholder: Contributing/placeholder.md
   - Approval Process:
-     - Asynchronous Review and Approval: Approval-Process/Asynchronous-Review-and-Approval-process.md
-     - Using Supermajority vote to achieve agreement: Approval-Process/Using-Supermajority-vote-to-achieve-agreement.md
-     - Voting on Technical Issues: Approval-Process/Voting-on-Technical-Issues.md
+      - Asynchronous Review and Approval: Approval-Process/Asynchronous-Review-and-Approval-process.md
+      - Using Supermajority vote to achieve agreement: Approval-Process/Using-Supermajority-vote-to-achieve-agreement.md
+      - Voting on Technical Issues: Approval-Process/Voting-on-Technical-Issues.md
   - Documentation:
-     - Semantic-Versioning: Documentation/Semantic-Versioning.md
+      - Semantic-Versioning: Documentation/Semantic-Versioning.md
   - Technical Decision Making:
-     - Decision Making: Technical-Decision-Making/Decision_Making.md
-     - Handling Objections: Technical-Decision-Making/Handling-objections.md
-     - Seeking Consensus: Technical-Decision-Making/Seeking_Consensus.md
+      - Decision Making: Technical-Decision-Making/Decision_Making.md
+      - Handling Objections: Technical-Decision-Making/Handling-objections.md
+      - Seeking Consensus: Technical-Decision-Making/Seeking_Consensus.md
   - Terminology and Conventions:
      - Definitions: Terminology-and-Conventions/Seeking_Consensus.md
      - Language: Terminology-and-Conventions/Language.md
