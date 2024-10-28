@@ -666,87 +666,12 @@
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
-                
-                  
+
+<h1 id="local-registries">Using Supermajority vote</h1>
+<p> Placeholder.</p>
 
 
-<h1 id="local-registries">Local Registries</h1>
-<p>This section investigates options for configuring the usage of local Docker (or Helm Chart) registries. The goal of configuring such local registries is to avoid the reliance on public, Internet-accessible registries. The reasons for not using such public registries are mainly twofold: (1) publicly hosted Docker images or Helm charts could become unavailable at some point, as the owner decides to take the Docker images or Helm charts off the public registry, (2) Internet connectivity may not be available to the device and hence public registries are not reachable, or (3) end-users want to host their own registries so they can do security scans and validate the packages.</p>
-<p>In terms of connectivity, we can thereby distinguish mainly between the following device categories:</p>
-<ol>
-<li><strong>Fully connected device</strong>, which means a device is deployed in the field (e.g., a factory shop floor) and has access to the Internet.</li>
-<li><strong>Locally connected device</strong>, i.e., the device has connectivity to a local network (e.g., factory- or enterprise-wide) and a local repository can be made reachable.</li>
-<li><strong>Air-gapped device</strong>, i.e., the device generally is not connected and must be configured by accessing it directly (via USB, Bluetooth, or a direct network link, e.g., via Ethernet cable, or similar) for example via a technician’s laptop.</li>
-</ol>
-<p>Local registries for Docker images and Helm Charts can be used for all 3 categories of devices. In case of <strong>fully connected devices</strong>, although the device could reach the Internet, a local registry can still be useful, e.g., as a cache for remote registries to save on bandwidth or to have Docker images and Helm Carts reliably available. In case of <strong>locally connected devices</strong>, a local registry is required to enable the WOA to install margo applications on the device, as the device/WOA does not have Internet access. Thereby, the local registry can be setup as a <em>pull-through cache</em> where data (e.g., Docker images) are cached locally when they are first retrieved from a remote source and subsequent requests for the same data are served from the local cache rather than fetching it again from the remote source. In case of <strong>air-gapped devices</strong>, a local registry has to be accessible on the technician's laptop (or other directly connected device), which performs the application installation process.</p>
-<p>To setup local registries, different configuration options exist:</p>
-<h2 id="option-docker-registry-mirror-on-kubernetes-level">Option - Docker Registry Mirror on Kubernetes Level</h2>
-<p>Kubernetes supports the configuration of registry mirrors. How this is configured depends on the distribution and the underlying container runtime. Distributions that utilize <strong>containerd</strong> as runtime (e.g., k3s or microk8s) allow the definition of mirrors in a configuration file. For example, in k3s the file <code>/etc/rancher/k3s/registries.yaml</code> can be used to set up a mirror for each device's Kubernetes environment:</p>
-<pre><code>mirrors:
-  &quot;docker.io&quot;:
-    endpoint:
-      - &quot;http://&lt;local-registry-ip&gt;:5000&quot;
-configs:
-  &quot;docker.io&quot;:
-    auth:
-      username: &quot;&lt;username&gt;&quot;
-      password: &quot;&lt;password&gt;&quot;
-</code></pre>
-<h2 id="option-docker-registry-as-pull-through-cache-on-docker-level">Option - Docker Registry as Pull-through Cache on Docker Level</h2>
-<p>To configure a pull-through cache in Docker for the container registry, a Docker Registry can be setup that acts as caching proxy for a remote Docker registry. Such a Docker Registry container can be defined using the following <code>config.yml</code>:</p>
-<pre><code>version: 0.1
-log:
-  fields:
-    service: registry
-storage:
-  filesystem:
-    rootdirectory: /var/lib/registry
-http:
-  addr: :5000
-  headers:
-    X-Content-Type-Options: [nosniff]
-health:
-  storagedriver:
-    enabled: true
-    interval: 10s
-    threshold: 3
-proxy:
-  remoteurl: https://registry-1.docker.io
-</code></pre>
-<p>This registry can be started uing the following command:
-<code>docker run -d -p 5000:5000 --restart unless-stopped --name registry -v $(pwd)/config.yml:/etc/docker/registry/config.yml registry:2</code></p>
-<p>Then, the Docker daemon needs to be configured to use the private registry as a mirror in the <code>/etc/docker/daemon.json</code> file:</p>
-<pre><code>{
-  &quot;registry-mirrors&quot;: [&quot;http://10.100.2.102:5000&quot;],
-  &quot;insecure-registries&quot;: [&quot;10.100.2.102:5000&quot;]
-}
-</code></pre>
-<h2 id="option-helm-chart-registry-as-pull-through-cache">Option - Helm Chart Registry as Pull-through Cache</h2>
-<p>Setting up a pull-through cache for Helm charts in combination with Kubernetes involves configuring a local Helm chart repository, e.g., ChartMuseum that can be installed with the <code>PROXY_CACHE</code> variable set to <code>true</code>:</p>
-<pre><code>helm repo add chartmuseum https://chartmuseum.github.io/charts
-helm repo update
-helm install my-chartmuseum chartmuseum/chartmuseum --set env.open.DISABLE_API=false --set env.open.PROXY_CACHE=true
-</code></pre>
-<p>Then, this Helm Chart repository can be added to Helm and chart releases can be installed there:</p>
-<pre><code>helm repo add my-cached-repo http://&lt;chartmuseum-ip&gt;:8080
-helm repo update
-helm install my-release my-cached-repo/&lt;chart-name&gt;
-
-</code></pre>
-<p>Now, when deploying applications in Kubernetes using Helm, the cached repository is used to serve charts rather than the remote repository.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
+          
               </article>
             </div>
           
