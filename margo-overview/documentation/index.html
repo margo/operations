@@ -308,7 +308,7 @@
               <article class="md-content__inner md-typeset">
 
 <h1 id="application-package-definition"><strong>Organization Operational Document</strong></h1>
-<p>Placeholder</p>
+<p>This section outlines key terms, phrases, and writing rules used in Margo's specifications. Understanding these is crucial for correct interpretation and application of the standard. Knowing these elements helps users better understand and use the specifications, leading to more effective implementation of the guidelines.</p>
 <div class="container"><details> <summary>Terminology and Conventions</summary>
 <div>
 <ul>
@@ -319,8 +319,6 @@
 <li>****MAY**:**:This word, or the adjective "OPTIONAL", means that an item is truly optional.  One vendor may choose to include the item because a particular marketplace requires it or because the vendor feels that  it enhances the product while another vendor may omit the same item. An implementation which does not include a particular option MUST be prepared to interoperate with another implementation which does include the option, though perhaps with reduced functionality. In the same vein, an implementation which does include a particular option MUST be prepared to interoperate with another implementation which  does not include the option (except, of course, for the feature the  option provides.)</li>
 </div>
 </details></div>
-<p>While asynchronous decision-making offers numerous advantages, it's important to establish clear guidelines and expectations to ensure its effectiveness. This includes setting appropriate response timeframes, using organized communication tools, and having a designated facilitator to keep the process on track.</p>
-
               
 <h2><strong>Definitions</strong></h2>
 <hr />           
@@ -423,16 +421,50 @@
 </details></div>
 
 
-<h2><strong>Approval Criteria: Ensuring Thorough Evaluation and Consensus</strong></h2>
+<h2><strong>Semantic Versioning</strong></h2>
 <hr />
-<p>The approval criteria during the review period ensure that all contributions undergo a rigorous evaluation process, promoting transparency, collaboration, and quality assurance. These criteria establish a framework for assessing proposed changes, modifications, or additions to the project, ensuring that they align with its goals, standards, and best practices. By adhering to these criteria, we aim to maintain the integrity of our work while fostering an environment of open communication and collective decision-making.</p>
+<p>Semantic Versioning provides a structured and methodical approach to managing software versions, enabling developers to communicate changes effectively and maintain compatibility across different releases. This system offers a clear set of rules and conventions for version number assignment, facilitating smoother collaboration and easier dependency management in software development projects.</p>
 <div class="container"><details><summary><aside> 💡 <strong>A contribution is considered "approved", and therefore, it can be merged if:</strong></summary>
 <div>
 <ul>
-<li>The contribution has not received any sustainable objection during the review period, AND</li>
-<li>At least three reviewers have indicated that they agree with the contribution</li>
-<li>If a sustained objection is received, the contribution cannot be merged, even if three or more contributors agree.</li>
-<li>During the review period, if a contribution receives a comment, the Group must decide whether to accept the comment. At least three reviewers must agree on whether the contribution should be merged. When developing specifications, the approval or rejection of a contribution is determined through a democratic process based on a majority decision. &lt;/aside&gt;</li>
+<li>
+<figure>
+	<img src="figures/semantic-versioning.svg" alt="Semantic Versioning">
+	<figcaption>Semantic Versioning</figcaption>
+</figure>
+
+<table>
+  <caption>Document Version</caption>
+  <thead>
+    <tr>
+	    <th>Field</th>
+	    <th>Use</th>
+	    <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>X</td>
+    <td><i>Major Version Indicator</i></td>
+    <td>This mandatory field SHALL identify the major version of the document as determined by the WG.
+      Major versions contain major feature additions, MAY contain incompatibilities with previous document or specification revisions and MAY change, drop, or replace existing interfaces. Initial releases are “1_0”.
+    </td>
+  </tr>
+  <tr>
+    <td>Y</td>
+    <td><i>Minor Version Indicator</i></td>
+    <td>Minor version of the document. This mandatory field SHALL identify the minor version of the document. It is incremented every time a minor change is made to the approved document version. Minor versions MAY contain minor feature additions, are compatible with the preceding Major_Minor specification revision, and provide evolving interfaces. The initial minor release for any major release is “0”, i.e. 1_0</td>
+   </tr>
+   <tr>
+    <td>Z</td>
+    <td><i>Service Indicator</i></td>
+    <td>Service indicator for the document. Incremented every time a corrective update is made to the <strong>Approved</strong> (not draft) document version by the WG.
+    This field is OPTIONAL and SHALL be provided whenever a service release of the document is made. The first service indicator release SHALL be “_1” for any Major_Minor release.
+    Service indicators are intended to be compatible with the Major_Minor release they relate to but add bug fixes. No new functions will be added through the release of Service Indicators.
+    </td>
+  </tr>
+  </tbody>
+</table>
 </ul>
  </article>
 </div>
