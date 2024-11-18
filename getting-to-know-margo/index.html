@@ -276,9 +276,6 @@ combination of apps & devices with a single effort while allowing plant operator
 these apps with the fleet management software of their choice.</li>	
 </div>
 </details></div>		      
-
-<h3 id="application-package-definition"><strong>Technical Working Group</strong></h3>
-
 		      
 <h3 id="what-must-be-true"><strong>What must be true</strong></h3>
 <p>Given the personas defined for Margo’s user story, the following initial objectives must be accomplished to realize the Margo interoperability promise:</p>
@@ -292,7 +289,33 @@ these apps with the fleet management software of their choice.</li>
 </div>
 </details></div>
 
-	
+<h3 id="step-by-step-scenario"><Step-by-step scenario</strong></h3>
+<p>As a plant operator, I have identified two Apps, promising to improve the throughput of my manufacturing process and contributing to the digitalization of my operations. I want to test and validate their value and subsequently deploy and maintain these apps at scale in my</p>
+<div class="container"><details> <summary>Plant operator perspective</summary>
+div>
+<ul>
+<li>1. I identify two Apps, each from a different vendor, that together improve the throughput of my manufacturing process (example: an AI engine for downtime prediction and a data collection application)</li>
+<li>2. I identify an edge device in the existing installed base that matches the app requirements to perform the Proof of Concept.</li>	
+<li>3. I added the two apps to my organization’s private catalog of apps in a restricted area.</li>
+<li>4. I deploy and configure the app instances to the selected edge device.</li>
+<li>5. As needed, I configure the device to match some specific App requirements.</li>
+<li>6. The Applications are running, and I can act upon the insights delivered by the apps. I confirm that the promised throughput improvement is delivered by the two apps.</li>
+<li>7. I observe the health state of the Apps and the hosting Edge device with my existing observability platform.</li>
+<li>8. I pay for the billed value delivered by the app vendor. /!\ although this is a crucial step in the user scenario, Margo will not prescribe any billing processes, nor will it provide billing process capabilities. Financial transactions are not in scope for the Margo initiative. At the same time, Margo intends to facilitate this billing process where possible.</li>
+<li>9. I deploy the two apps at scale to five hundred devices across my production facilities in different regions. The facilities each have different regional edge device suppliers. I use my single, organization-wide orchestration tooling for this task.</li>
+<li>10. I identify the edge device model from my regional device suppliers based on the requirements of the two Apps.</li>
+<li>11. I receive the Edge devices in my regional facilities and onboard them in my device orchestration software.</li>
+<li>12. With my device orchestration tooling, I provision the Edge devices and update the OS and related drivers & platform components to the current level, as published by the Hardware manufacturer.</li>
+<li>13. I interact with my workload orchestration software and initiate the deployment process of the two apps: I request verification of Edge device capabilities versus Apps requirements for the targets.</li>
+<li>14. I initiate the deployment & configuration of the five hundred app instances to these new edge devices and configure as required the device capabilities.</li>
+<li>15. I observe my fleet of devices and apps in my global observability platform and take corrective actions on notification of unhealthy app instances (example: storage capacity limit reached on the data collection app instance in line five of the Barcelona, Spain plant).</li>
+<li>16. The app vendor of the data collection app notified me that a new release containing an advanced data compression feature is available for download in their repository. I want to deploy this feature, as it requires less storage capacity on my hosting devices.</li>
+<li>17. Using my workload orchestration software, I schedule a fleet-wide update to all downtime prediction app instances to take advantage of this new data compression feature.</li>
+<li>18. I observe my fleet of data collection apps with my global observability platform and confirm these apps consume less storage.</li>
+
+
+</div>
+</details></div>
 	
 <h2 id="application-package-definition"><strong>Technical Working Group</strong></h2>
 <p>The Technical Working Group (TWG) has several essential roles and responsibilities that contribute to the success of our projects and initiatives.</p>
