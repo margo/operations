@@ -13,7 +13,7 @@
       <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
 
-        <title>Governance</title>
+        <title>Plugfest</title>
  
       <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
   
@@ -66,7 +66,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Plugfest Participation
+              Plugfests
             
           </span>
         </div>
@@ -220,11 +220,11 @@
                 </div>
               </div>
 
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-<h1 id="governance"><strong>Plugfests</strong></h1>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="plugfest"><strong>Plugfest</strong></h1>
 
-<h2 id="governance">Rules Of Engagement</h2> 
+<h2 id="plugfest">Margo Plugfest Rules of Engagement</h2> 
 <hr/>                		      
 <p>The MARGO project is pleased to present the MARGO PlugFest (the “PlugFest”). This represents an opportunity for participating suppliers within the MARGO ecosystem (each a “Participant”) to try out their products in a controlled environment and to receive feedback with respect to the interoperability of those products within a MARGO environment. 
 
@@ -234,7 +234,7 @@ The PlugFest is not a certification process, and Participants will not be able t
 
 Participants may gain insights into the performance or features of other products during the PlugFest. If you are uncomfortable with this possibility, we recommend not participating. 
 
-The PlugFest will be hosted at a third-party facility (the “Test Lab”) on behalf of MARGO. Neither MARGO nor the Test Lab will have any liability to any Participant or any third party arising from or related to the PlugFest, including, without limitation, any publication of PlugFest performance and/or interoperability data.   
+The PlugFest will be hosted at a third-party facility (the “Test Lab”) on behalf of MARGO. Neither MARGO nor the Test Lab will have any liability to any Participant or any third party arising from or related to the PlugFest including, without limitation, any publication of PlugFest performance and/or interoperability data.   
 
 PlugFest results will be distributed to participants for review prior to official publication. Participating organizations may request that their company names and prototype identifiers be pseudonymized in any published materials. All communications regarding PlugFest outcomes—whether by the MARGO Project or by participants—should focus on promoting overall enhancements to the MARGO specification, rather than ranking or singling out specific companies or products. Beginning at the start of the PlugFest and continuing for sixty (60) calendar days following its conclusion, or until the official PlugFest report is published (whichever occurs first), participants are prohibited from publicly disclosing any PlugFest results. 
 
@@ -244,8 +244,15 @@ Furthermore, participants hereby acknowledge and agree that, under no circumstan
 
 We reserve the right to terminate any Participant’s continued participation in the PlugFest or to refuse access to any future PlugFest to any Participant that has failed to comply with these Rules of Engagement. </p>
 
+</details></div>
+</ul>
+</li>
+</ul>
+                
+</article>
+</div>
 
-<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
